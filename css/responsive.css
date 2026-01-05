@@ -376,3 +376,29 @@ img {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+/* Mobile layout: two tall images side-by-side */
+@media (max-width: 768px) {
+
+    /* Hide extra room images */
+    .room-container {
+        display: none !important;
+    }
+
+    .about_thumb2 {
+        display: flex;
+        gap: 12px;
+    }
+
+    .about_thumb2 .img_1,
+    .about_thumb2 .img_2 {
+        width: 50%;
+    }
+
+    .about_thumb2 img {
+        width: 100%;
+        height: 220px;        /* controls tall look */
+        object-fit: cover;    /* crops nicely */
+        border-radius: 14px;  /* rounded like screenshot */
+        display: block;
+    }
+}
